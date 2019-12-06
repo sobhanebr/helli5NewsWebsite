@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title> حذف کاربر </title>
+<script type="text/javascript">
+function c( ) 
+{
+
+	var temp="";
+
+	if (document.getElementById("usn").value.length==0)
+
+		temp+="لطفاً نام کاربری را وارد کنید. \r\n"; 
+	
+	if (temp.length!=0)
+	{
+		alert(temp);
+		return false;
+	}
+	else if (temp.length==0)
+		return true;
+
+}
+
+</script>
+
+</head>
+
+<body dir="rtl">
+
+<div align="center">
+
+<table>
+
+<form action="delwr.php" method="get" onsubmit="return c();">
+<tr>
+<td>نام کاربری</td> 
+<td><input type="text" name="username" id="usn"></td>
+</tr><tr>
+<td colspan="2" align="center">
+<input type="submit" value="حذف کاربر"> 
+<input type="reset" value="از نو">
+</td></tr>
+</form>
+</table>
+</div>
+
+</body>
+
+</html>

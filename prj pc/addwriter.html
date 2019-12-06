@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title> form </title>
+<script type="text/javascript">
+function d( ) 
+{
+
+	var temp="";
+
+	if (document.getElementById("un").value.length==0)
+
+		temp+="لطفاً نام کاربری را وارد کنید. \r\n"; 
+		
+	
+
+	if (document.getElementById("pass").value.length==0)
+	
+		temp+="رمز عبور کاربر را وارد نمایید. \r\n"; 
+	
+	if (temp.length!=0)
+	{
+		alert(temp);
+		return false;
+	}
+	else if (temp.length==0)
+		return true;
+
+}
+
+</script>
+
+</head>
+
+<body dir="rtl">
+
+<div align="center">
+
+<table>
+
+<form action="addwr.php" method="post" onsubmit="return d();">
+<tr>
+<td>نام کاربری</td> 
+<td><input type="text" name="username" id="un"></td>
+</tr><tr>
+<td>رمز عبور</td>
+<td><input type="password" name="password" id="pass"></td>
+</tr><tr>
+<td colspan="2" align="center">
+<input type="submit" value="اضافه کردن کاربر"> 
+<input type="reset" value="از نو">
+</td></tr>
+</form>
+</table>
+</div>
+
+</body>
+
+</html>

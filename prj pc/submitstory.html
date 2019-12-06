@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title> form </title>
+<script type="text/javascript">
+function a( ) 
+{
+
+	var temp="";
+
+	if (document.getElementById("title").value.length==0)
+
+		temp+="عنوان خبر را وارد نمائید. \r\n"; 
+
+	if (temp.length!=0)
+	{
+		alert(temp);
+		return false;
+	}
+	else if (temp.length==0)
+		return true;
+
+}
+
+</script>
+
+</head>
+
+<body dir="rtl">
+
+<div align="center">
+
+<table>
+
+<form action="preview.php" method="post" onsubmit="return a();" enctype="multipart/form-data">
+<tr>
+<td>عنوان خبر</td> 
+<td><input type="text" name="title" id="title" maxlength="200"></td>
+</tr><tr>
+<td>عکس خبر</td>
+<td><label for="file"></label><input name="file" type="file" accept="image/*" /></td>
+</tr><tr>
+<td> خلاصه خبر </td>
+<td><textarea rows="4" cols="50" name="summary" maxlength="2000" required></textarea></td>
+</tr><tr>
+<td>متن کامل خبر</td>
+<td><textarea rows="10" cols="50" name="full" maxlength="200000" required></textarea></td>
+</tr><tr>
+<td colspan="2" align="center">
+<input type="submit" value="پیش نمایش"> 
+<input type="reset" value="از نو">
+
+</td></tr>
+</form>
+
+</table>
+</div>
+
+</body>
+
+</html>

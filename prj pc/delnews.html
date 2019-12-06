@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title> حذف خبر</title>
+<script type="text/javascript">
+function b( ) 
+{
+
+	var temp="";
+
+	if (document.getElementById("title").value.length==0)
+
+		temp+="لطفاً عنوان خبر را وارد کنید. \r\n"; 
+	
+	if (temp.length!=0)
+	{
+		alert(temp);
+		return false;
+	}
+	else if (temp.length==0)
+		return true;
+
+}
+
+</script>
+
+</head>
+
+<body dir="rtl">
+
+<div align="center">
+
+<table>
+
+<form action="delne.php" method="get" onsubmit="return b();">
+<tr>
+<td>عنوان خبر</td> 
+<td><input type="text" name="title" id="title"></td>
+</tr><tr>
+<td colspan="2" align="center">
+<input type="submit" value="حذف خبر"> 
+<input type="reset" value="از نو">
+</td></tr>
+</form>
+</table>
+</div>
+
+</body>
+
+</html>
